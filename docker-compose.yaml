@@ -30,7 +30,7 @@ services:
     restart: always
     environment:
       CONFIG_SERVER_URL: 'http://config:8888'
-      EUREKA_URL: 'http://discovery:8761/eureka/'
+      EUREKA_URL: 'http://discovery:8761/eureka'
     ports:
       - 8080:8080
     expose:
@@ -44,8 +44,8 @@ services:
     image: rmohr/activemq
     restart: always
     ports:
-      - 6161:61616
+      - 61613:61613
       - 8161:8161
     expose:
-      - 6161
+      - 61613
       - 8161
