@@ -44,8 +44,10 @@ services:
     image: rmohr/activemq
     restart: always
     ports:
+      - 6161:61616
       - 61613:61613
       - 8161:8161
     expose:
       - 61613
+      - 6161
       - 8161
