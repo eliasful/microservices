@@ -13,12 +13,12 @@ services:
 
   discovery:
     container_name: discovery
-    image: eliasful/microservices-discovery:5.0
+    image: eliasful/microservices-discovery:6.0
     restart: always
     environment:
       CONFIG_SERVER_URL: 'http://config:8888'
     ports:
-      - 8761:8761
+      - "8761:8761"
     expose:
       - 8761
     depends_on:
